@@ -1,0 +1,488 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AppointmentBook
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            IntroMenu();
+
+
+
+        }
+        // Intro MENU //
+
+        static void IntroMenu()
+        {
+            // Begin Header // 
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("          Health");
+            Console.WriteLine("");
+            Console.WriteLine("          Achieving Regional Health Through High Quality Care");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            // End Header // 
+            Console.WriteLine("User, when speaking with clients please remember to greet with the following lines:");
+            Console.WriteLine("");
+            Console.WriteLine("          'Hello welcome to Immediate Care. How can we provide you High Quality Care today?'");
+            Console.WriteLine("          'As we due focus visits, what is main concern for todays visit?'");
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("User please press <Enter> to continue");
+
+            string myoptions;
+            myoptions = Console.ReadLine();
+            switch (myoptions)
+            {
+                case "":
+                    MainMenu();
+                    break;
+
+            }
+
+
+
+            IntroMenu();
+
+        }
+
+        // Main Menu //
+        static void MainMenu ()
+        {
+            // Begin Header // 
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("          Health");
+            Console.WriteLine("");
+            Console.WriteLine("          Achieving Regional Health Through High Quality Care");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("Remember:");
+            Console.WriteLine("          'Hello welcome to Immediate Care. How can we provide you High Quality Care today?'");
+            Console.WriteLine("          'Ok, may I see your photo ID and insurance card if you have one?'");
+            Console.WriteLine("");
+            Console.WriteLine("'As we due focus visits, what is main concern for todays visit?'");
+            Console.WriteLine("");
+
+
+            // List of Options // 
+            Console.WriteLine("1. Medication (Rx) Refill");
+            Console.WriteLine("");
+            Console.WriteLine("2. Vaccine");
+            Console.WriteLine("");
+            Console.WriteLine("3. Blood Pressure");
+            Console.WriteLine("");
+            Console.WriteLine("4. COVID Testing");
+            Console.WriteLine("");
+            Console.WriteLine("5. STD/STI Testing");
+            Console.WriteLine("");
+            Console.WriteLine("6. TB (Tuberculosis) Placement");
+            Console.WriteLine("");
+            Console.WriteLine("7. Injury");
+            Console.WriteLine("");
+            Console.WriteLine("8. Referrals");
+            Console.WriteLine("");
+            Console.WriteLine("9. Labs");
+            Console.WriteLine("");
+            Console.WriteLine("10. Other");
+            Console.WriteLine("");
+            Console.WriteLine("select one of the following options: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10");
+
+            string myoptions;
+            myoptions = Console.ReadLine();
+            switch (myoptions)
+            {
+                case "1":
+                    Rx();
+                    break;
+                case "2":
+                    Vax();
+                    break;
+                case "3":
+                    BP();
+                    break;
+                case "4":
+                    COVID();
+                    break;
+                case "5":
+                    STD();
+                    break;
+                case "6":
+                    TB();
+                    break;
+                case "7":
+                    Injury();
+                    break;
+                case "8":
+                    Referral();
+                    break;
+                case "9":
+                   Labs();
+                    break;
+                case "10":
+                    Other();
+                    break;
+            }
+            
+            MainMenu();
+
+        }
+
+
+        /////////////////////////////////////// BEGIN MEDICATIONS ///////////////////////////////////////
+        // Medication Menu // 
+        static void Rx()
+        {
+            // Begin Header // 
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("          Health");
+            Console.WriteLine("");
+            Console.WriteLine("          Achieving Regional Health Through High Quality Care");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            // End Header // 
+            Console.WriteLine("MEDICATIONS (RX) REFILLS");
+
+            Console.WriteLine("What Medications are you requesting a refill on today?");
+
+            Console.WriteLine("select one of the following options: 1, 2, 3");
+            Console.WriteLine("");
+            Console.WriteLine("{High Blood Pressure}");
+            Console.WriteLine("");
+            Console.Write("Lisinopril"); Console.Write("Atenolol"); Console.Write("Hydrochlorothiazide");
+            Console.WriteLine("");
+            Console.Write("Lisinopril"); Console.Write("Lisinopril"); Console.Write("Lisinopril");
+            Console.WriteLine("");
+            Console.WriteLine("{Diabetes}");
+            Console.WriteLine("");
+            Console.Write("Metformin"); Console.Write("Gabapentin"); Console.Write("Lisinopril");
+            Console.WriteLine("");
+            Console.Write("Lisinopril"); Console.Write("Lisinopril"); Console.Write("Lisinopril");
+            Console.WriteLine("");
+            Console.WriteLine("{Thyroid}");
+            Console.WriteLine("");
+            Console.Write("Levothyroxine"); Console.Write("Synthroid"); Console.Write("Lisinopril");
+            Console.WriteLine("");
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("Do you have the bottles?");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            Console.WriteLine("Has Health prescribed the medicaiton to you in the last year?");
+
+
+
+            Console.ReadLine();
+            Console.WriteLine("User, press <ENTER> to return to Main Menu.");
+            Console.WriteLine("User, press <0> for 'What is Open Access?");
+
+        }
+        /////////////////////////////////////// END MEDICATIoNS ///////////////////////////////////////
+
+
+
+
+
+
+        
+        /////////////////////////////////////// BEGIN INJURIES ///////////////////////////////////////
+        // Injury Menu // 
+        static void Injury()
+        {
+            // Begin Header // 
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("          Health");
+            Console.WriteLine("");
+            Console.WriteLine("          Achieving Regional Health Through High Quality Care");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            // End Header // 
+            Console.WriteLine("INJURIES");
+            Console.WriteLine("Did the injury occur at work?");
+            Console.WriteLine("1. Yes 2. No");
+            Console.WriteLine("select one of the following options: 1 or 2");
+            Console.ReadLine();
+            Console.WriteLine("User, press <ENTER> to return to Main Menu.");
+            Console.WriteLine("User, press <0> for 'What is Open Access?");
+
+            string myInjuryoptions;
+            myInjuryoptions = Console.ReadLine();
+            switch (myInjuryoptions)
+            {
+                case "1":
+                    InjuryYES();
+                    break;
+                case "2":
+                    InjuryNO();
+                    break;
+            }
+
+        }
+
+        // Injury YES Menu // 
+        static void InjuryYES()
+        {
+            // Begin Header // 
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("          Health");
+            Console.WriteLine("");
+            Console.WriteLine("          Achieving Regional Health Through High Quality Care");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            // End Header // 
+            Console.WriteLine("INJURIES - YES at Work");
+            Console.WriteLine();
+            Console.WriteLine("'I do apologize but our Immediate Care Department cannot see work related injuries.");
+            Console.WriteLine("You will need to see the clinic that your work is contracted with regarding this issue.");
+            Console.ReadLine();
+            Console.WriteLine("User, press <ENTER> to return to Main Menu.");
+            Console.WriteLine("User, press <0> for 'What is Open Access?");
+        }
+        // Injury NO Menu // 
+        static void InjuryNO()
+        {
+            // Begin Header // 
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("          Health");
+            Console.WriteLine("");
+            Console.WriteLine("          Achieving Regional Health Through High Quality Care");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            // End Header // 
+            Console.WriteLine("INJURIES - NO");
+            Console.WriteLine();
+            Console.WriteLine("'What is the nature of the injury and where is it located?");
+            Console.WriteLine("");
+            Console.ReadLine();
+            Console.WriteLine("User, press <ENTER> to return to Main Menu.");
+            Console.WriteLine("User, press <0> for 'What is Open Access?");
+        }
+        /////////////////////////////////////// END INJURIES ///////////////////////////////////////
+
+
+
+
+        /////////////////////////////////////// BEGIN REFERRAL ///////////////////////////////////////
+        // Referral Menu // 
+        static void Referral()
+        {
+            // Begin Header // 
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("          Health");
+            Console.WriteLine("");
+            Console.WriteLine("          Achieving Regional Health Through High Quality Care");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            // End Header // 
+            Console.WriteLine("REFERRALS");
+            Console.WriteLine("'I do apologize to say, but the Immediate Care Department does not start referrals,");
+            Console.WriteLine("you will need to see your Primary Care Physician, you can utilize the Open Access schedule.'");
+            Console.ReadLine();
+            Console.WriteLine("User, press <ENTER> to return to Main Menu.");
+            Console.WriteLine("User, press <0> for 'What is Open Access?");
+        }
+        /////////////////////////////////////// END REFERRAL ///////////////////////////////////////
+
+
+
+
+        /////////////////////////////////////// BEGIN VACCINE ///////////////////////////////////////
+        // Vaccine Menu // 
+        static void Vax()
+        {
+            // Begin Header // 
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("          Health");
+            Console.WriteLine("");
+            Console.WriteLine("          Achieving Regional Health Through High Quality Care");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            // End Header // 
+            Console.WriteLine("VACCINES");
+            Console.WriteLine("'What types vaccine are looking for today, we offer either FLU or COVID19.'");
+            Console.WriteLine("select one of the following options: 1, 2, 3");
+            Console.WriteLine("");
+            Console.ReadLine();
+            Console.WriteLine("User, press <ENTER> to return to Main Menu.");
+            Console.WriteLine("User, press <0> for 'What is Open Access?");
+
+
+        }
+        /////////////////////////////////////// END VACCINE ///////////////////////////////////////
+
+
+
+        /////////////////////////////////////// BEGIN BP ///////////////////////////////////////
+        // Blood Pressure Menu // 
+        static void BP()
+        {
+            // Begin Header // 
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("          Health");
+            Console.WriteLine("");
+            Console.WriteLine("          Achieving Regional Health Through High Quality Care");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            // End Header // 
+            Console.WriteLine("Blood Pressure");
+            Console.WriteLine("''");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.ReadLine();
+            Console.WriteLine("User, press <ENTER> to return to Main Menu.");
+            Console.WriteLine("User, press <0> for 'What is Open Access?");
+
+
+        }
+        /////////////////////////////////////// END BP ///////////////////////////////////////
+
+
+
+        /////////////////////////////////////// BEGIN STD ///////////////////////////////////////
+        // STD/STI TESTING/TREATMENT Menu // 
+        static void STD()
+        {
+            // Begin Header // 
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("          Health");
+            Console.WriteLine("");
+            Console.WriteLine("          Achieving Regional Health Through High Quality Care");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            // End Header // 
+            Console.WriteLine("STD/STI Testing/Treatment");
+            Console.WriteLine("''");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.ReadLine();
+            Console.WriteLine("User, press <ENTER> to return to Main Menu.");
+            Console.WriteLine("User, press <0> for 'What is Open Access?");
+
+
+        }
+        /////////////////////////////////////// END STD ///////////////////////////////////////
+
+
+        /////////////////////////////////////// BEGIN TB ///////////////////////////////////////
+        // TUBERCULOSIS Menu // 
+        static void TB()
+        {
+            // Begin Header // 
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("          Health");
+            Console.WriteLine("");
+            Console.WriteLine("          Achieving Regional Health Through High Quality Care");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            // End Header // 
+            Console.WriteLine("TUBERCULOSIS");
+            Console.WriteLine("''");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.ReadLine();
+            Console.WriteLine("User, press <ENTER> to return to Main Menu.");
+            Console.WriteLine("User, press <0> for 'What is Open Access?");
+
+
+
+        }
+        /////////////////////////////////////// END TB ///////////////////////////////////////
+
+
+        /////////////////////////////////////// BEGIN LABS ///////////////////////////////////////
+        // LABS Menu // 
+        static void Labs()
+        {
+            // Begin Header // 
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("          Health");
+            Console.WriteLine("");
+            Console.WriteLine("          Achieving Regional Health Through High Quality Care");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            // End Header // 
+            Console.WriteLine("LAB WORK");
+            Console.WriteLine("'I do apologize to say but our Immediate Care Department does not go over or order routine lab work");
+            Console.WriteLine("you will need to see your Primary Care Physician. I can send a message to your primary care physician if");
+            Console.WriteLine("they are with Health or you can utilize the Open Access schedule.'");
+            Console.ReadLine();
+            Console.WriteLine("User, press <ENTER> to return to Main Menu.");
+            Console.WriteLine("User, press <0> for 'What is Open Access?");
+
+
+        }
+        /////////////////////////////////////// END LABS ///////////////////////////////////////
+
+        /////////////////////////////////////// BEGIN COVID ///////////////////////////////////////
+        // Vaccine Menu // 
+        static void COVID()
+        {
+            // Begin Header // 
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("          Health");
+            Console.WriteLine("");
+            Console.WriteLine("          Achieving Regional Health Through High Quality Care");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            // End Header // 
+            Console.WriteLine("COVID Testing");
+            Console.WriteLine("''");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.ReadLine();
+            Console.WriteLine("User, press <ENTER> to return to Main Menu.");
+            Console.WriteLine("User, press <0> for 'What is Open Access?");
+
+
+        }
+        /////////////////////////////////////// END VACCINE ///////////////////////////////////////
+
+        /////////////////////////////////////// BEGIN OTHER ///////////////////////////////////////
+        // Vaccine Menu // 
+        static void Other()
+        {
+            // Begin Header // 
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("          Health");
+            Console.WriteLine("");
+            Console.WriteLine("          Achieving Regional Health Through High Quality Care");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            // End Header // 
+            Console.WriteLine("Other Options");
+            Console.WriteLine("''");
+            Console.WriteLine("select one of the following options: 1, 2, 3");
+            Console.WriteLine("");
+            Console.ReadLine();
+            Console.WriteLine("User, press <ENTER> to return to Main Menu.");
+            Console.WriteLine("User, press <0> for 'What is Open Access?");
+
+
+        }
+        /////////////////////////////////////// END VACCINE ///////////////////////////////////////
+
+
+    }
+}
